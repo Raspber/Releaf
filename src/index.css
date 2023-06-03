@@ -1,18 +1,23 @@
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+*{
+  padding: 0;
+  margin: 0;
+}
 
 body {
   margin: 0;
-  font-family: "SF Pro Display", SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
+  padding: 0;
+  font-family: "dejanire-sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
-  color: #f5f5f7;
+  background-color: #ffffff;
+  color: #D0D545;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "dejanire-sans", sans-serif;
 }
 
 body::-webkit-scrollbar-track {
@@ -145,43 +150,85 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav.nav-wrapper {
-  margin: 0;
   width: 100%;
   min-width: 320px;
-  height: 48px;
-  max-height: 44px;
+  height: 75px;
+  max-height: 75px;
   font-size: 17px;
-  background-color: #f2f2f2;
+  background-color:none;
 }
 
 nav .nav-content {
-  margin: 0 auto;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1024px;
-  padding: 0 22px;
+  height: 75px;
+  max-height: 75px;
 }
 
 nav .list-styled {
   cursor: default;
-  margin: 0 -9px;
   width: auto;
   height: 44px;
-  display: flex;
   justify-content: space-between;
   list-style: none;
+  display: flex;
+  justify-items: center;
+  margin: 0 5%;
+  height: 75px;
+  max-height: 75px;
 }
 
-nav .link-styled {
-  font-size: 12px;
-  font-weight: 400;
+
+nav .centerWrapper{
+  align-items: center;
+  display: flex;
+}
+
+nav .logo {
+  height: 100%;
+}
+
+nav .nav-button{
+  background:#7E8362;
+  padding: 8px;
+  border-radius: 50px;
+  width: 120px;
+  border: none;
+  text-align: center;
+  font-family: "dejanire-sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  color: #D0D545;
   letter-spacing: -0.01em;
   line-height: 1;
+  align-items: center;
+  margin-right: 21px;
+}
+
+nav .rightWrapper{
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 44px;
-  color: #000000cc;
+  gap: 2px;
+}
+
+nav .nav-search{
+  border: none;
+  background:#E1E2B3;
+  border-radius: 50px;
+  height: 25px;
+  color: #69730A;
+  padding-left: 6px;
+}
+
+nav .nav-search:focus{
+  outline: none;
+  color: #7E8362;
+  
+}
+
+nav .searchLogo{
+  margin-left: 10px;
 }
 
 .jumbotron-section.wrapper {
