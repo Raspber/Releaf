@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className='nav-content'>
                 <ul className='list-styled'>
                     <li className='centerWrapper'>
-                        <img className='logo' src={Logo} alt="Releaf Logo"/>
+                        <img className='navlogo' src={Logo} alt="Releaf Logo"/>
                     </li>
                     <div className='rightWrapper'>
                     <li className='centerWrapper'>
