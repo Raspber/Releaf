@@ -1,4 +1,6 @@
 @import url("https://use.typekit.net/iuf6dql.css");
+@import url("https://use.typekit.net/iuf6dql.css");
+
 *{
   padding: 0;
   margin: 0;
@@ -83,16 +85,16 @@ body::-webkit-scrollbar-thumb {
 .display-section.wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 980px;
+  max-width:100%;
   width: 100%;
+  box-sizing: border-box;
+  height: calc(100vh - 40px);
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 50px 0 400px 0;
-  height: 100vh;
-  box-sizing: border-box;
-  /* opacity: 0; */
   position: relative;
+  align-content: center;
+  justify-content: center;
 }
 
 .display-section .title {
@@ -101,24 +103,34 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   letter-spacing: -0.022em;
   margin-bottom: 0;
+  text-align: end;
 }
 
 .display-section .text {
   display: inline-block;
-  color: transparent;
+  color: #AFB336;
   background-image: linear-gradient(180deg, #ffb6ff, #b344ff);
   -webkit-background-clip: text;
   background-clip: text;
   padding-top: 0.5px;
   margin-top: 16px;
-  font-size: 48px;
-  font-weight: 600;
+  font-family: "dejanire-sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 7.5em;
+  letter-spacing: -0.022em;
   margin-bottom: 18px;
 }
 
 .display-section .description {
-  font-size: 21px;
+  font-size: 45px;
   font-weight: 400;
+}
+
+.display-section .description-list{
+  font-family: "snug-variable", sans-serif;
+  font-variation-settings: "XHGT" 100, "wdth" 1;
+  color:#4B5512 ;
 }
 
 .display-section .button {
@@ -138,7 +150,7 @@ body::-webkit-scrollbar-thumb {
 
 .display-section .back-button {
   background: white;
-  color: black;
+  color: #4B5512;
   border: none;
   border-radius: 50px;
   padding: 10px 30px;
@@ -220,7 +232,7 @@ nav .nav-search{
   background:#E1E2B3;
   border-radius: 50px;
   height: 25px;
-  color: #69730A;
+  color: #4B5512;
   padding-left: 6px;
 }
 
