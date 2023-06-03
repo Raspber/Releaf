@@ -2,13 +2,13 @@ import gsap from "gsap";
 
 export const scrollAnimation = ( position, target, onUpdate ) => {
     const tl = gsap.timeline();
-
+    
     tl.to(position, {
 
         
-        x:-0.8017775833,
+        x:.25,
         y:12,
-        z:16.7435332958,
+        z:11.5,
 
         scrollTrigger: {
             trigger: '.sound-section',
@@ -23,9 +23,9 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
 
     tl.to(target, {
 
-        x:3,
-        y:-.42,
-        z:.80,
+        x:4,
+        y:0,
+        z:1,
 
         scrollTrigger: {
             trigger: '.sound-section',
@@ -53,8 +53,8 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
     tl.to(position, {
 
         
-        x:-3,
-        y:4,
+        x:3,
+        y:2,
         z:12,
 
         scrollTrigger: {
@@ -69,9 +69,9 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
 
     tl.to(target, {
 
-        x:-2,
-        y:-.15,
-        z:.80,
+        x: -1.5,
+        y:.15,
+        z:-.05,
 
         scrollTrigger: {
             trigger: '.display-section',
@@ -95,6 +95,6 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
             immediateRender: false,
 
         }, onUpdate
-    })
+    });
 
 }

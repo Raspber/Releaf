@@ -95,6 +95,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   align-content: center;
   justify-content: center;
+  text-align: end;
 }
 
 .display-section .title {
@@ -120,6 +121,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 7.5em;
   letter-spacing: -0.022em;
   margin-bottom: 18px;
+  margin-right: 25%;
 }
 
 .display-section .description {
@@ -395,7 +397,7 @@ nav .searchLogo{
 }
 
 .sound-section .content {
-  max-width: 80vw;
+  max-width: 90vw;
   width: 100%;
   padding: 200px 0;
   display: flex;

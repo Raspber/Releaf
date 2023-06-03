@@ -24,7 +24,7 @@ const WebgiViewer = () => {
 
     const memoizedScrollAnimation = useCallback(
         ( position, target, onUpdate ) => {
-            if ( position && target && onUpdate){
+            if ( position && target && onUpdate ){
                 scrollAnimation( position, target, onUpdate );
             }
         }, []
