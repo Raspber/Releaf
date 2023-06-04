@@ -1,19 +1,23 @@
 import React from "react";
 
+
 const DisplaySection = () => {
 
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth"})
     }
 
-    const handleLearnMore = () => {
-        const element = document.querySelector(".buynow-section");
+    const handleBuyNow = () => {
+        
         window.scrollTo({
-            top: element?.getBoundingClientRect().bottom,
-            left: 0,
-            behavior: 'smooth'
+            top: 4000,
+            left:0,
+            behavior: "smooth"
         })
+        console.log(element?.getBoundingClientRect().bottom)
+        console.log(window.pageYOffset)
     }
+
     return (
         <div className="display-section wrapper">
             <p className="text">Ninja Turle.</p>
@@ -22,12 +26,7 @@ const DisplaySection = () => {
                 <li className="description-list">2.25% terps</li>
                 <li className="description-list">96.53% thc</li>
             </ul>
-            <ul>
-                <li>
-                        <button className='button' onClick={handleLearnMore}>Buy Now</button>
-                </li>
-            </ul>
-            <button className="back-button" onClick={handleScrollToTop}>TOP</button>
+            <button className='button' onClick={handleBuyNow}>Buy Now</button>
         </div>
     );
 };

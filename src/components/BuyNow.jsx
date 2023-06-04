@@ -1,9 +1,14 @@
 import React from 'react'
 
 const BuyNow = () => {
+
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth"})
+    }
+
     return (
         <div className='buynow-section wrapper'>
-            <div className='body'>
+            
                 <div className='buynow-section-content content'>
                     <p className='title'>Limited Stock</p>
                     <span className='agewarning'>
@@ -18,8 +23,8 @@ const BuyNow = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-
+            
+            <button className="back-button" onClick={handleScrollToTop}>TOP</button>
         </div>
     )
 }
