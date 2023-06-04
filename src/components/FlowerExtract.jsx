@@ -10,6 +10,17 @@ const FlowerExtract = () => {
             behavior: "smooth"
         })
     }
+
+    const handleBuyNow = () => {
+        const element = document.querySelector(".buynow-section");
+        window.scrollTo({
+            top: element?.getBoundingClientRect().bottom,
+            left:0,
+            behavior: "smooth"
+            
+        })
+    }
+
     return (
         <div className='sound-section wrapper'>
             <div className='body'>
@@ -22,7 +33,7 @@ const FlowerExtract = () => {
                     </span>
                     <ul className='links'>
                         <li>
-                            <button className='button'>Buy Now</button>
+                            <button className='button' onClick={handleBuyNow}>Buy Now</button>
                         </li>
                         <li>
                             <a  className='link'onClick={handleLearnMore}>Learn More</a>

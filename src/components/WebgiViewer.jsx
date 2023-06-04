@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WebgiViewer = () => {
     const canvasRef = useRef(null);
-
+    
     const memoizedScrollAnimation = useCallback(
         ( position, target, onUpdate ) => {
             if ( position && target && onUpdate ){
@@ -35,6 +35,8 @@ const WebgiViewer = () => {
             canvas: canvasRef.current,
         })
 
+        
+        
         const manager = await viewer.addPlugin(AssetManagerPlugin)
 
         const camera = viewer.scene.activeCamera;

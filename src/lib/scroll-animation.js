@@ -23,9 +23,9 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
 
     tl.to(target, {
 
-        x:4,
-        y:0,
-        z:1,
+        x:3.5,
+        y:-.8,
+        z:0,
 
         scrollTrigger: {
             trigger: '.sound-section',
@@ -70,7 +70,7 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
     tl.to(target, {
 
         x: -1.5,
-        y:.15,
+        y:-.025,
         z:-.05,
 
         scrollTrigger: {
@@ -95,6 +95,53 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
             immediateRender: false,
 
         }, onUpdate
-    });
+    }),
+    
+    tl.to('.display-section', {
 
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.buynow-section',
+            start: "top bottom",
+            end: "top top",
+            scrub: 2,
+            immediateRender: false,
+
+        }, onUpdate
+    }),
+
+    tl.to(position, {
+
+        
+        x: 25,
+        y:-.85,
+        z:-.95,
+
+        scrollTrigger: {
+            trigger: '.buynow-section',
+            start: "top bottom",
+            end: "top top",
+            scrub: 1,
+            immediateRender: false,
+            duration: 1,
+
+        },
+    }),
+
+    tl.to(target, {
+
+        x: -6,
+        y:-1.5,
+        z:-5,
+
+        scrollTrigger: {
+            trigger: '.buynow-section',
+            start: "top bottom",
+            end: "top top",
+            scrub: 1,
+            immediateRender: false,
+
+
+        }, onUpdate
+    });
 }

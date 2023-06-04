@@ -3,6 +3,7 @@ import Jumbotron from "./components/Jumbotron";
 import FlowerExtract from "./components/FlowerExtract";
 import DisplaySection from "./components/DisplaySection";
 import WebgiViewer from "./components/WebgiViewer";
+import BuyNow from "./components/BuyNow";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Jumbotron/>
       <FlowerExtract/>
       <DisplaySection/>
+      <BuyNow/>
       <WebgiViewer/>
     </div>
   );
