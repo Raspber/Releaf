@@ -18,11 +18,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scrollAnimation } from '../lib/scroll-animation';
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.set('.jumbotron-section', { y: -1000 });
+
 
 const WebgiViewer = () => {
     const canvasRef = useRef(null);
-    
     const memoizedScrollAnimation = useCallback(
         ( position, target, onUpdate ) => {
             if ( position && target && onUpdate ){
@@ -34,13 +33,9 @@ const WebgiViewer = () => {
     const setupViewer = useCallback(async () => {
         const viewer = new ViewerApp({
             canvas: canvasRef.current,
-            useRgbm: false,
         })
 
-        
-        
         const manager = await viewer.addPlugin(AssetManagerPlugin)
-
         const camera = viewer.scene.activeCamera;
         const position = camera.position;
         const target = camera.target;
@@ -48,7 +43,7 @@ const WebgiViewer = () => {
         // Add plugins individually.
         await viewer.addPlugin(GBufferPlugin)
         await viewer.addPlugin(new ProgressivePlugin(32))
-        await viewer.addPlugin(new TonemapPlugin(!viewer.useRgbm))
+        await viewer.addPlugin(new TonemapPlugin(viewer))
         await viewer.addPlugin(GammaCorrectionPlugin)
         await viewer.addPlugin(SSRPlugin)
         await viewer.addPlugin(SSAOPlugin)
