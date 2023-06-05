@@ -18,6 +18,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { scrollAnimation } from '../lib/scroll-animation';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.set('.jumbotron-section', { y: -1000 });
 
 const WebgiViewer = () => {
     const canvasRef = useRef(null);
@@ -33,6 +34,7 @@ const WebgiViewer = () => {
     const setupViewer = useCallback(async () => {
         const viewer = new ViewerApp({
             canvas: canvasRef.current,
+            useRgbm: false,
         })
 
         

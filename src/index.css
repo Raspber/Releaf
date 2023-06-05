@@ -16,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   color: #D0D545;
+  overflow-x: hidden;
 }
 
 code {
@@ -38,6 +39,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e1e2b3;
 }
+
 
 .App #content {
   transition-duration: 0.3s;
@@ -306,6 +308,7 @@ nav .searchLogo{
   min-height: 831px;
   display: flex;
   align-items: center;
+  
 }
 
 .sound-section .body {
@@ -358,7 +361,7 @@ nav .searchLogo{
   font-weight: 300;
   font-style: italic;
   color: #CDB34C;
-  width: 50%;
+  width: 45%;
   align-self: end;
 }
 
@@ -414,7 +417,6 @@ nav .searchLogo{
   align-content: center;
   justify-content: center;
   text-align: end;
-  z-index: 51;
 }
 
 .display-section .title {

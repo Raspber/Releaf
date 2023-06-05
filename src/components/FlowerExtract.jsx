@@ -31,6 +31,10 @@ const FlowerExtract = () => {
                     Grown in house under ideal conditions for 
                     the best possible flower.
                     </span>
+                    <br />
+                    <span className='description'>
+                    With over 15 years in the cannabis industry, we have fine-tuned our growing process for high thc, high terps, and yield. A Varies of our strains have competed and won cups. 
+                    </span>
                     <ul className='links'>
                         <li>
                             <button className='button' onClick={handleBuyNow}>Buy Now</button>
@@ -46,3 +50,4 @@ const FlowerExtract = () => {
 }
 
 export default FlowerExtract
+

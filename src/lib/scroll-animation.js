@@ -1,11 +1,10 @@
 import gsap from "gsap";
 
+
 export const scrollAnimation = ( position, target, onUpdate ) => {
     const tl = gsap.timeline();
     
     tl.to(position, {
-
-        
         x:.25,
         y:12,
         z:11.5,
@@ -16,17 +15,14 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
             end: "top top",
             scrub: 1,
             immediateRender: false,
-
         },
         onUpdate
     }),
 
     tl.to(target, {
-
         x:2.5,
         y:-.8,
         z:0,
-
         scrollTrigger: {
             trigger: '.sound-section',
             start: "top bottom",
@@ -38,15 +34,14 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
     }),
     
     tl.to('.jumbotron-section', {
-
         opacity: 0,
+        
         scrollTrigger: {
             trigger: '.sound-section',
             start: "top bottom",
             end: ".display-section",
             scrub: 2,
             immediateRender: false,
-
         }
     }),
 
@@ -85,20 +80,34 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
     }),
 
     tl.to('.sound-section', {
-
+        x:1000,
         opacity: 0,
+        duration:5,
         scrollTrigger: {
             trigger: '.display-section',
             start: "top bottom",
             end: "top top",
-            scrub: 2,
+            scrub: 0,
             immediateRender: false,
 
         }, onUpdate
     }),
-    
-    tl.to('.display-section', {
 
+    tl.from('.sound-section', {
+        x:-1000,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.sound-section',
+            start: "top bottom",
+            end: "top top",
+            scrub: 0,
+            immediateRender: false,
+
+        }, onUpdate
+    }),
+
+    tl.to('.display-section', {
+        x:-1000,
         opacity: 0,
         scrollTrigger: {
             trigger: '.buynow-section',
@@ -110,9 +119,20 @@ export const scrollAnimation = ( position, target, onUpdate ) => {
         }, onUpdate
     }),
 
-    tl.to(position, {
+    tl.from('.display-section', {
+        x:-1000,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.display-section',
+            start: "top bottom",
+            end: "top top",
+            scrub: 0,
+            immediateRender: false,
 
-        
+        }, onUpdate
+    }),
+
+    tl.to(position, {
         x: 25,
         y:-.85,
         z:-.95,

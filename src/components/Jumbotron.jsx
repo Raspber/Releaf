@@ -1,4 +1,5 @@
 import React from 'react'
+import { slideAnimation } from 'e:/fantasticprint/client/src/config/motion';
 
 const Jumbotron = () => {
 
@@ -11,6 +12,7 @@ const Jumbotron = () => {
         })
     }
     return (
+        
         <div className='jumbotron-section wrapper'>
             <h2 className='title'>Releaf.</h2>
             <p className='text'>Premium Cannabis Extract</p>
@@ -24,3 +26,4 @@ const Jumbotron = () => {
 }
 
 export default Jumbotron
+
