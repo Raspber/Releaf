@@ -1,28 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import Logo from '../assets/images/logo.png'
 import Search from '../assets/images/search.svg'
 
 const Navbar = () => {
-    const handleBuyNow = () =>{
-        const element = document.querySelector(".buynow-section");
-        window.scrollTo({
-            top: element?.getBoundingClientRect().bottom,
-            left:0,
-            behavior: "smooth"
-            
-        })
-    }
+    
     return (
         <nav className='nav-wrapper'>
             <div className='nav-content'>
                 <ul className='list-styled'>
                     <li className='centerWrapper'>
-                        <img className='navlogo' src={Logo} alt="Releaf Logo"/>
+                        <Link to = "/">
+                            <img className='navlogo' src={Logo} alt="Releaf Logo"/>
+                        </Link>
+                    </li>
+                    <li className='centerWrapper'>
+                        <Link to = '/'>
+                            <button className='nav-button'>Home</button>
+                        </Link>
+                    </li>
+                    <li className='centerWrapper'>
+                        <Link to = '/products'>
+                            <button className='nav-button'>Products</button>
+                        </Link>
                     </li>
                     <div className='rightWrapper'>
-                    <li className='centerWrapper'>
-                        <button className='nav-button' onClick={handleBuyNow}>Buy Now</button>
-                    </li>
                     <li className='centerWrapper nav-search'>
                         <img className='searchLogo' src={Search} alt="Search" />
                         <input className='nav-search' type="text" />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { slideAnimation } from 'e:/fantasticprint/client/src/config/motion';
+
 
 const Jumbotron = () => {
 

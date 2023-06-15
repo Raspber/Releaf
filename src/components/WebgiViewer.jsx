@@ -56,21 +56,21 @@ const WebgiViewer = () => {
 
         viewer.scene.activeCamera.setCameraOptions( {controlsEnabled: false});
 
-        window.scrollTo( 0,0 );
-
-        let needsupdate = true;
-
+        
+        
         const onUpdate = () => {
             needsupdate = true;
             viewer.setDirty();
         }
-
+        
+        window.scrollTo( 0,0 );
+        let needsupdate = true;
         viewer.addEventListener("preFrame", () => {
             if(needsupdate) {
             camera.positionTargetUpdated(true);
             needsupdate = false;
             }
-        })
+        });
 
         memoizedScrollAnimation( position, target, onUpdate );
     }, []);
